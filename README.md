@@ -28,7 +28,7 @@
 
 # 🌇 Countries Cities<a name="about-project"></a>
 
-<p> a mobile web application provide information about geo location and information about countries and cities
+<p> A mobile web application provide information about geo location and information about countries and cities
 </p>
 
 ## 🛠 Built With <a name="built-with"> </a>
@@ -61,7 +61,7 @@ to run on your localhost clone the project to local folder
 
 ### Setup
 
-> <p> git clone https://github.com/zewdu444/countries_cites.git</p>
+> <p> git clone https://github.com/zewdu444/countries_cities.git</p>
 > cd countries_cites
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,7 +102,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zewdu444/countries_cites/issues).
+Feel free to check the [issues page](https://github.com/zewdu444/countries_cities/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

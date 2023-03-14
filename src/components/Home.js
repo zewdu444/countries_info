@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
 import { useNavigate } from 'react-router-dom';
 import { fetchCountry } from '../redux/home/HomeSlice';
+import { fetchCountryDetail, selectedCountryAction } from '../redux/detail/DetailSlice';
 
 function Home() {
   const dispatch = useDispatch();
@@ -40,8 +41,9 @@ function Home() {
     return result.toLocaleString('en-US');
   };
   const HomeCardHandler = (e) => {
+    dispatch(selectedCountryAction(e.target.id));
+    dispatch(fetchCountryDetail(e.target.id));
     navigate('/detail');
-    console.log(e.target.id);
   };
   return (
 
@@ -81,7 +83,6 @@ function Home() {
             </Typography>
           </CardContent>
         </Box>
-
       </Card>
 
       <Box sx={{ flexGrow: 1 }}>

@@ -14,7 +14,7 @@ const logger = createLogger({
 const store = configureStore({
   reducer: {
     country: homeReducer,
-    city: detailReducer,
+    countrydetail: detailReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

@@ -8,8 +8,11 @@ import MicNoneIcon from '@mui/icons-material/MicNone';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import LanguageIcon from '@mui/icons-material/Language';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Typography from '@mui/material/Typography';
 import { searchField } from '../redux/home/HomeSlice';
 
 const Search = styled('div')(({ theme }) => ({
@@ -60,21 +63,45 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 function NavBar() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const selectedCountry = useSelector((state) => state.countrydetail.selectedCountry);
   const searchHandler = (e) => {
     dispatch(searchField(e.target.value));
+  };
+  const usePathname = () => {
+    const location = useLocation();
+    return location.pathname;
+  };
+  const BackHandler = () => {
+    navigate('/');
   };
   return (
 
     <Box sx={{ flexGrow: 1 }}>
+
       <AppBar position="fixed" sx={{ bgcolor: '#00897b' }}>
 
         <Toolbar>
           <Box sx={{ disply: 'flex', flexDirection: 'row' }}>
+            <IconButton
+              onClick={BackHandler}
+              sx={{ display: usePathname() === '/detail' ? ('inline') : ('none') }}
+              aria-label="back"
+            >
+              <ArrowBackIosIcon sx={{
+                minWidth: '40px',
+                minHeight: '35px',
+                color: '#1de9b6',
+              }}
+              />
+            </IconButton>
+
             <LanguageIcon sx={{
               minWidth: '40px',
               minHeight: '40px',
               color: '#1de9b6',
+              display: usePathname() === '/detail' ? ('none') : ('block'),
             }}
             />
           </Box>
@@ -84,8 +111,24 @@ function NavBar() {
             marginRight: 'auto',
           }}
           >
+            <Typography
+              gutterBottom
+              variant="body2"
+              component="span"
+              align="center"
+              sx={{
+                fontWeight: 600,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                color: '#1de9b6',
+                display: usePathname() === '/detail' ? ('block') : ('none'),
+              }}
+            >
+              {selectedCountry.toUpperCase()}
+
+            </Typography>
             <Search sx={{
-              display: 'flex',
+              display: usePathname() === '/detail' ? ('none') : ('flex'),
               marginLeft: 'auto',
               marginRight: 'auto',
               color: '#1de9b6',

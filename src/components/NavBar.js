@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import SearchIcon from '@mui/icons-material/Search';
@@ -30,6 +29,7 @@ const Search = styled('div')(({ theme }) => ({
     marginLeft: theme.spacing(30),
     width: '400px',
   },
+
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({

@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import LanguageIcon from '@mui/icons-material/Language';
+import { useNavigate } from 'react-router-dom';
 import { fetchCountry } from '../redux/home/HomeSlice';
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
   const status = useSelector((state) => state.country.status);
   const countries = useSelector((state) => state.country.countrystore);
   const searchInput = useSelector((state) => state.country.searchresult);
+  const navigate = useNavigate();
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchCountry());
@@ -36,6 +38,10 @@ function Home() {
     const population = countries.map((country) => country.country_population);
     const result = population.reduce((sum, num) => sum + num);
     return result.toLocaleString('en-US');
+  };
+  const HomeCardHandler = (e) => {
+    navigate('/detail');
+    console.log(e.target.id);
   };
   return (
 
@@ -85,8 +91,13 @@ function Home() {
               displayCountries().map((country) => (
                 <Grid item xs={6} sm={3} xl={3} key={country.country_id}>
                   <Card variant="outline" sx={{ bgcolor: '#26a69a', minHeight: 180, m: 1 }}>
-                    <CardActionArea id={country.country_id} sx={{ minHeight: 180 }}>
+                    <CardActionArea
+                      id={country.country_name}
+                      sx={{ minHeight: 180, zIndex: '2' }}
+                      onClick={(e) => { HomeCardHandler(e); }}
+                    >
                       <CardMedia
+                        id={country.country_name}
                         component="img"
                         sx={{
                           height: 80,
@@ -99,11 +110,11 @@ function Home() {
                         src={country.country_flag}
                         alt={country.country_id}
                       />
-                      <CardContent>
-                        <Typography gutterBottom variant="h7" component="div" color="white" align="center">
+                      <CardContent id={country.country_name}>
+                        <Typography id={country.country_name} gutterBottom variant="h7" component="div" color="white" align="center">
                           {country.country_name}
                         </Typography>
-                        <Typography variant="body2" color="white" align="center">
+                        <Typography id={country.country_name} variant="body2" color="white" align="center">
                           Population:
                           {' '}
                           {' '}

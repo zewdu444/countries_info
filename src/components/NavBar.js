@@ -2,14 +2,16 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
+import { useDispatch } from 'react-redux';
+import LanguageIcon from '@mui/icons-material/Language';
+import { searchField } from '../redux/home/HomeSlice';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -19,10 +21,14 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '75%',
+  width: '95%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(2),
     width: 'auto',
+  },
+  [theme.breakpoints.up('lg')]: {
+    marginLeft: theme.spacing(30),
+    width: '400px',
   },
 }));
 
@@ -54,25 +60,23 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 function NavBar() {
+  const dispatch = useDispatch();
+  const searchHandler = (e) => {
+    dispatch(searchField(e.target.value));
+  };
   return (
 
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ bgcolor: '#00897b' }}>
+      <AppBar position="fixed" sx={{ bgcolor: '#00897b' }}>
 
         <Toolbar>
           <Box sx={{ disply: 'flex', flexDirection: 'row' }}>
-            <IconButton
-              sx={{ disply: 'flex', flexDirection: 'row' }}
-              size="medium"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-            >
-              <ArrowBackIosIcon hidden />
-            </IconButton>
-            <Typography sx={{ disply: 'flex', flexDirection: 'row' }} variant="h6" component="span">
-              2015
-            </Typography>
+            <LanguageIcon sx={{
+              minWidth: '40px',
+              minHeight: '40px',
+              color: '#1de9b6',
+            }}
+            />
           </Box>
           <Box sx={{
             display: 'flex',
@@ -84,7 +88,7 @@ function NavBar() {
               display: 'flex',
               marginLeft: 'auto',
               marginRight: 'auto',
-
+              color: '#1de9b6',
             }}
             >
               <SearchIconWrapper>
@@ -93,6 +97,7 @@ function NavBar() {
               <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
+                onChange={searchHandler}
               />
             </Search>
           </Box>
@@ -106,7 +111,7 @@ function NavBar() {
               edge="start"
               color="inherit"
               aria-label="mic"
-              sx={{ mr: 1 }}
+              sx={{ mr: 1, color: '#1de9b6' }}
             >
               <MicNoneIcon />
             </IconButton>
@@ -115,7 +120,7 @@ function NavBar() {
               edge="start"
               color="inherit"
               aria-label="setting"
-              sx={{ mr: 1 }}
+              sx={{ mr: 1, color: '#1de9b6' }}
             >
               <SettingsIcon />
             </IconButton>

@@ -106,7 +106,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
->
+> Add Mobile Version using React Native
 
 ## 🤝 Contributing <a name="contributing"></a>
 

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3> 🌇 <b>Countries Cities</b> 🌇</h3>
+  <h3> 🗺️ <b>Countries Information</b> 🗺️</h3>
 
 </div>
 
@@ -26,14 +26,15 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 🌇 Countries Cities<a name="about-project"></a>
+# 🗺️ Countries Information<a name="about-project"></a>
 
-<p> A mobile web application provide information about geo location and information about countries and cities
+ <p> Mobile web application offers information about countries such as their population, capital city, flag, and other relevant details. Users can access a wide range of country-specific information, making it an invaluable resource for personal or professional research purposes
 </p>
-
+## 📷 project screenshot <a name="screen-shoot"> </a>
+![alt text](./assets/world_pic.png)
 ## 🛠 Built With <a name="built-with"> </a>
 
-> HTML 5 , css3, javascript ES6, React , Redux and external API
+> React, Redux , MUI react and external API
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -41,8 +42,11 @@
 
 ### Key Features <a name="key-features"></a>
 
- <li>Countries Cites</li>
-  
+ <li>Display total world population</li>
+<li>Display Countries with their flag and population</li>
+<li>Detail information about selected country</li>
+<li>Responisive layout</li>
+<li>Material UI mobile web</li>
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -61,7 +65,7 @@ to run on your localhost clone the project to local folder
 
 ### Setup
 
-> <p> git clone https://github.com/zewdu444/countries_cities.git</p>
+> <p> git clone https://github.com/zewdu444/countries_info.git</p>
 > cd countries_cites
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,7 +106,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/zewdu444/countries_cities/issues).
+Feel free to check the [issues page](https://github.com/zewdu444/countries_info/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +118,9 @@ Feel free to check the [issues page](https://github.com/zewdu444/countries_citie
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> I would like to thank Microverse team
+- <p>I want to thank the Microverse staff. </p>
+
+- <p> I would like to express gratitude to <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a>, as per the Creative Commons license.</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

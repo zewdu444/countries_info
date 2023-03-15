@@ -28,10 +28,11 @@
 
 # 🗺️ Countries Information<a name="about-project"></a>
 
- <p> Mobile web application offers information about countries such as their population, capital city, flag, and other relevant details. Users can access a wide range of country-specific information, making it an invaluable resource for personal or professional research purposes
+ <p>A Mobile web application offers information about countries such as their population, capital city, flag, and other relevant details. Users can access a wide range of country-specific information, making it an invaluable resource for personal or professional research purposes
 </p>
 ## 📷 project screenshot <a name="screen-shoot"> </a>
-![alt text](./assets/world_pic.png)
+![alt text](https://raw.githubusercontent.com/zewdu444/countries_info/test/assets/world_pic.png)
+
 ## 🛠 Built With <a name="built-with"> </a>
 
 > React, Redux , MUI react and external API
@@ -47,6 +48,7 @@
 <li>Detail information about selected country</li>
 <li>Responisive layout</li>
 <li>Material UI mobile web</li>
+<li>Used REST countries API <a href="https://restcountries.com/">Link</a></li>
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>

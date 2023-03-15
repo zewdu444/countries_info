@@ -41,8 +41,8 @@ function Home() {
     return result.toLocaleString('en-US');
   };
   const HomeCardHandler = (e) => {
-    dispatch(selectedCountryAction(e.target.id));
     dispatch(fetchCountryDetail(e.target.id));
+    dispatch(selectedCountryAction(e.target.id));
     navigate('/detail');
   };
   return (
@@ -112,7 +112,7 @@ function Home() {
                         alt={country.country_id}
                       />
                       <CardContent id={country.country_name}>
-                        <Typography id={country.country_name} gutterBottom variant="h7" component="div" color="white" align="center">
+                        <Typography id={country.country_name} gutterBottom variant="body2" component="div" color="white" align="center">
                           {country.country_name}
                         </Typography>
                         <Typography id={country.country_name} variant="body2" color="white" align="center">

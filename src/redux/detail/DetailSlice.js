@@ -6,7 +6,7 @@ const initialState = {
   detailstore: [],
   status: 'idle',
   error: null,
-  selectedCountry: 'Ethiopia',
+  selectedCountry: '',
 };
 export const fetchCountryDetail = createAsyncThunk('country/fetchCountryDetail', async (selectedCountry) => {
   try {
@@ -43,13 +43,10 @@ export const detailSlice = createSlice({
           maps: country.maps.googleMaps,
           timezones: country.timezones[0],
           region: country.region,
-          coatOfArms: country.coatOfArms.png,
+          coatOfArms: country.coatOfArms.svg,
           startOfWeek: country.startOfWeek,
           area: country.area,
           languages: country.languages,
-          idd: country.idd.root,
-          suffix: country.idd.suffixes[0],
-
         })),
         status: 'loaded',
       })).addCase(fetchCountryDetail.rejected, (state, action) => ({

@@ -30,7 +30,9 @@
 
  <p>A Mobile web application offers information about countries such as their population, capital city, flag, and other relevant details. Users can access a wide range of country-specific information, making it an invaluable resource for personal or professional research purposes
 </p>
+
 ## 📷 project screenshot <a name="screen-shoot"> </a>
+
 <img src="https://raw.githubusercontent.com/zewdu444/countries_info/test/assets/world_pic.png" alt="logo" width="auto"  height="auto" />
 
 ## 🛠 Built With <a name="built-with"> </a>
@@ -53,7 +55,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->
+- <a href="https://countries-information-4am6.onrender.com">Live Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,7 +76,7 @@ to run on your localhost clone the project to local folder
 
 ### Prerequisites
 
-In order to run this project you only need:
+In order to run this project you need:
 
 - latest web-browser
 - node.js and npm
@@ -90,7 +92,9 @@ To install this project in your local machine use
 
 To run the project, execute the following command:
 
-> In visual studio code open terminal then write "npm start" after on your browser open "http://localhost:3000".
+> <p> Open terminal on the same directory of project </p>
+> <p> write "npm start"</p>
+> <p> open http://localhost:3000/ in browser </p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -120,7 +124,7 @@ Feel free to check the [issues page](https://github.com/zewdu444/countries_info/
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- <p>I want to thank the Microverse staff. </p>
+- <p>I want to thank the Microverse team. </p>
 
 - <p> I would like to express gratitude to <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance</a>, as per the Creative Commons license.</p>
 

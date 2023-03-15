@@ -23,8 +23,8 @@ function Detail() {
               <CardMedia
                 component="img"
                 sx={{
-                  height: 120,
-                  width: 150,
+                  height: 110,
+                  maxWidth: 150,
                   borderRadius: 2,
                   mt: 8,
                   marginLeft: 'auto',
@@ -51,10 +51,9 @@ function Detail() {
               <CardMedia
                 component="img"
                 sx={{
-                  height: 180,
+                  height: 130,
                   width: 'auto',
-                  pt: 2,
-                  pr: 2,
+                  pt: 6,
                   marginLeft: 'auto',
                   marginRight: 'auto',
                 }}
@@ -72,7 +71,7 @@ function Detail() {
             <Card
               variant="outline"
               sx={{
-                bgcolor: '#26a69a', m: 1,
+                bgcolor: '#00897b', m: 1,
               }}
             >
               {/* official name */}
@@ -89,8 +88,9 @@ function Detail() {
               </CardContent>
             </Card>
           </Grid>
+
           {/* population */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -115,7 +115,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* capital city */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -140,7 +140,7 @@ function Detail() {
           </Grid>
 
           {/* Timezone */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -164,7 +164,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* Region */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -188,7 +188,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* Total Area */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -215,7 +215,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* startOfWeek */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -239,7 +239,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* Language */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -252,7 +252,10 @@ function Detail() {
                   component="div"
                   color="white"
                   align="center"
-                  sx={{ mb: -2, mt: -1 }}
+                  sx={{
+                    mb: -2,
+                    mt: -1,
+                  }}
                 >
                   Languages:
                   {' '}
@@ -263,7 +266,7 @@ function Detail() {
             </Card>
           </Grid>
           {/* Maps */}
-          <Grid item xs={12} sm={12} xl={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Card
               variant="outline"
               sx={{
@@ -290,7 +293,6 @@ function Detail() {
               </CardContent>
             </Card>
           </Grid>
-
         </Grid>
 
       ) : (

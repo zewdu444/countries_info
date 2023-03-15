@@ -24,12 +24,20 @@ const Search = styled('div')(({ theme }) => ({
   },
   marginLeft: 0,
   width: '95%',
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('sx')]: {
     marginLeft: theme.spacing(2),
     width: 'auto',
   },
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(4),
+    width: '400px',
+  },
   [theme.breakpoints.up('lg')]: {
     marginLeft: theme.spacing(30),
+    width: '400px',
+  },
+  [theme.breakpoints.up('md')]: {
+    marginLeft: theme.spacing(20),
     width: '400px',
   },
 
@@ -39,7 +47,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -121,6 +128,13 @@ function NavBar() {
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 color: '#1de9b6',
+                pl: {
+                  lg: 40, md: 25, sm: 15, xs: 4,
+                },
+                fontSize: {
+                  lg: '30px', md: '25px', sm: '20px', xs: '15px',
+                },
+                mt: 1,
                 display: usePathname() === '/detail' ? ('block') : ('none'),
               }}
             >

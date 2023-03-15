@@ -91,7 +91,7 @@ function Home() {
             displayCountries().length > 0 ? (
               displayCountries().map((country) => (
                 <Grid item xs={6} sm={3} xl={3} key={country.country_id}>
-                  <Card variant="outline" sx={{ bgcolor: '#26a69a', minHeight: 180, m: 1 }}>
+                  <Card variant="outline" sx={{ bgcolor: '#26a69a', minHeight: 220, m: 1 }}>
                     <CardActionArea
                       id={country.country_name}
                       sx={{ minHeight: 180, zIndex: '2' }}
@@ -101,8 +101,11 @@ function Home() {
                         id={country.country_name}
                         component="img"
                         sx={{
-                          height: 80,
-                          width: 150,
+                          mt: 2,
+                          maxHeight: 100,
+                          minHeight: 100,
+                          maxWidth: 150,
+                          minWidth: 80,
                           borderRadius: 2,
 
                           marginLeft: 'auto',

@@ -31,7 +31,7 @@
  <p>A Mobile web application offers information about countries such as their population, capital city, flag, and other relevant details. Users can access a wide range of country-specific information, making it an invaluable resource for personal or professional research purposes
 </p>
 ## 📷 project screenshot <a name="screen-shoot"> </a>
-![alt text](https://raw.githubusercontent.com/zewdu444/countries_info/test/assets/world_pic.png)
+<img src="https://raw.githubusercontent.com/zewdu444/countries_info/test/assets/world_pic.png" alt="logo" width="auto"  height="auto" />
 
 ## 🛠 Built With <a name="built-with"> </a>
 

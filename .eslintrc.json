@@ -35,7 +35,8 @@
         "peerDependencies": false
       }
     ],
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/jsx-props-no-spreading": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
